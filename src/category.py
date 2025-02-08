@@ -1,0 +1,22 @@
+from src.product import Product
+
+class Category:
+    """Класс для представления категории"""
+    name: str
+    description: str
+    products: list
+
+    # Атрибут, показывающий количество категорий
+    category_count = 0
+
+    # Атрибут, показывающий количество товаров
+    product_count = 0
+
+    def __init__(self, name, description, products):
+        self.name = name
+        self.description = description
+        self.products = products
+
+        Category.category_count += 1
+
+        Category.product_count = Product.total_quantity
