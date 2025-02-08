@@ -19,4 +19,5 @@ class Category:
 
         Category.category_count += 1
 
-        Category.product_count = Product.total_quantity
+        for product in self.products:
+            Category.product_count += product.quantity
