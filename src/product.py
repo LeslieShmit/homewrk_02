@@ -1,5 +1,3 @@
-from tests.conftest import product
-
 
 class Product:
     """Класс для представления товара"""
@@ -16,14 +14,17 @@ class Product:
         self.quantity = quantity
 
     @classmethod
-    def new_product(cls, new_product_dict, existing_products):
-        for product in existing_products:
-            if product.name == new_product_dict["name"]:
-                product.quantity = product.quantity + new_product_dict["quantity"]
-                if new_product_dict["price"] > product.__price:
-                    product.__price = new_product_dict["price"]
-            else:
-                cls(**new_product_dict)
+    def new_product(cls, new_product_dict, existing_products=None):
+        if existing_products:
+            for product in existing_products:
+                if product.name == new_product_dict["name"]:
+                    product.quantity = product.quantity + new_product_dict["quantity"]
+                    if new_product_dict["price"] > product.__price:
+                        product.__price = new_product_dict["price"]
+                else:
+                    return cls(**new_product_dict)
+        else:
+            return cls(**new_product_dict)
 
     @property
     def price(self):
