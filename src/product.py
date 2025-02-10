@@ -1,4 +1,3 @@
-
 class Product:
     """Класс для представления товара"""
 
@@ -37,12 +36,12 @@ class Product:
             print("Цена не должна быть нулевая или отрицательная")
         else:
             if new_price < self.__price:
-                user_input = input("Введенная стоимость ниже оригинальной. Вы уверены, что хотите продолжить? Введите Y, чтобы продолжить: ").lower()
+                user_input = input(
+                    "Введенная стоимость ниже оригинальной. Вы уверены, что хотите продолжить? y/n: "
+                ).lower()
                 if user_input == "y":
                     self.__price = new_price
                 else:
                     return
             else:
                 self.__price = new_price
-
-

@@ -21,7 +21,6 @@ class Category:
         for product in self.__products:
             Category.product_count += product.quantity
 
-
     def add_product(self, product_obj):
         self.__products.append(product_obj)
         Category.product_count += product_obj.quantity
