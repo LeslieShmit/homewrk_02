@@ -21,6 +21,7 @@ class Product:
                     product.quantity = product.quantity + new_product_dict["quantity"]
                     if new_product_dict["price"] > product.__price:
                         product.__price = new_product_dict["price"]
+                    return product
                 else:
                     return cls(**new_product_dict)
         else:
