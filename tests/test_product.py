@@ -39,3 +39,9 @@ def test_price_property(product):
 def test_price_setter(product):
     product.price = 100000
     assert product.price == 100000
+
+def test_product_str(product):
+    assert str(product) == "Iphone 13, 80000.0 руб. Остаток: 1 шт."
+
+def test_product_add(product, product_2):
+    assert product + product_2 == 680_000.0
