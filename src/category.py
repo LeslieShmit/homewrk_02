@@ -15,14 +15,18 @@ class Category:
         self.name = name
         self.description = description
         self.__products = products
+        self.__current_product_count = 0
 
         Category.category_count += 1
 
+
+
         for product in self.__products:
             Category.product_count += product.quantity
+            self.__current_product_count += product.quantity
 
     def __str__(self):
-        return f"{self.name}, количество продуктов: {Category.product_count} шт."
+        return f"{self.name}, количество продуктов: {self.__current_product_count} шт."
 
     def add_product(self, product_obj):
         self.__products.append(product_obj)
