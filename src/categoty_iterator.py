@@ -1,12 +1,10 @@
-from unicodedata import category
-
 from src.category import Category
-from src.product import Product
 
 
 class CategoryIterator:
     """Класс, принимающий объект класса Category и возвращающий объект, в котором можно будет перебирать циклом
     товары в принятом объекте"""
+
     category_obj: Category
 
     def __init__(self, category_obj):

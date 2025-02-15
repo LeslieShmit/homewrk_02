@@ -19,8 +19,6 @@ class Category:
 
         Category.category_count += 1
 
-
-
         for product in self.__products:
             Category.product_count += product.quantity
             self.__current_product_count += product.quantity
