@@ -1,5 +1,6 @@
-from src.product import Product
 import pytest
+
+from src.product import Product
 
 
 def test_product_init(product):
@@ -52,4 +53,4 @@ def test_product_add(product, product_2):
 
 def test_product_add_error(product):
     with pytest.raises(TypeError):
-        result = product + 1
+        result = product + 1 # noqa

@@ -1,5 +1,6 @@
 from src.product import Product
 
+
 class LawnGrass(Product):
     """Дочерний класс от Product для представления газонной травы"""
 
@@ -15,7 +16,7 @@ class LawnGrass(Product):
         self.color = color
 
     def __add__(self, other):
-        if type(other) == LawnGrass:
+        if type(other) is LawnGrass:
             return self.__price * self.quantity + other.__price * other.quantity
         else:
             raise TypeError

@@ -1,5 +1,6 @@
 from src.product import Product
 
+
 class Smartphone(Product):
     """Дочерний класс от Product для представления смартфонов"""
 
@@ -17,7 +18,7 @@ class Smartphone(Product):
         self.color = color
 
     def __add__(self, other):
-        if type(other) == Smartphone:
+        if type(other) is Smartphone:
             return self.__price * self.quantity + other.__price * other.quantity
         else:
             raise TypeError
