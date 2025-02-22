@@ -1,4 +1,5 @@
 from src.product import Product
+import pytest
 
 
 def test_product_init(product):
@@ -47,3 +48,8 @@ def test_product_str(product):
 
 def test_product_add(product, product_2):
     assert product + product_2 == 680_000.0
+
+
+def test_product_add_error(product):
+    with pytest.raises(TypeError):
+        result = product + 1
