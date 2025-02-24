@@ -53,4 +53,4 @@ def test_product_add(product, product_2):
 
 def test_product_add_error(product):
     with pytest.raises(TypeError):
-        result = product + 1 # noqa
+        result = product + 1  # noqa

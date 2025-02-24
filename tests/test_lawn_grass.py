@@ -17,4 +17,4 @@ def test_smartphone_add(lawn_grass_1, lawn_grass_2):
 
 def test_smartphone_add_error(lawn_grass_1):
     with pytest.raises(TypeError):
-        result = lawn_grass_1 + 1 # noqa
+        result = lawn_grass_1 + 1  # noqa
