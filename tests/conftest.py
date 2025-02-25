@@ -83,6 +83,7 @@ def lawn_grass_1():
 def lawn_grass_2():
     return LawnGrass("Газонная трава 2", "Выносливая трава", 450.0, 15, "Италия", "5 дней", "Темно-зеленый")
 
+
 @pytest.fixture
 def order():
     return Order(Product(name="Iphone 13", description="Iphone 13 - ни дать, ни взять", price=80000.0, quantity=1), 2)

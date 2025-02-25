@@ -1,5 +1,5 @@
-from src.product import Product
 from src.abstract_group import AbstractGroup
+from src.product import Product
 
 
 class Order(AbstractGroup):
