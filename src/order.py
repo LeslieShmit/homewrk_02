@@ -13,4 +13,4 @@ class Order(AbstractGroup):
         self.total_price = product.price * quantity
 
     def __str__(self):
-        return f"Заказанный товар: {self.product}, кол-во: {self.quantity}, общая стоимость: {self.total_price}"
+        return f"Заказанный товар: {self.product.name}, кол-во: {self.quantity}, общая стоимость: {self.total_price}"
