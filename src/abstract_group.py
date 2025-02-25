@@ -5,4 +5,4 @@ class AbstractGroup(ABC):
 
     @abstractmethod
     def __str__(self):
-        pass
+        pass # pragma: no cover
