@@ -87,3 +87,7 @@ def lawn_grass_2():
 @pytest.fixture
 def order():
     return Order(Product(name="Iphone 13", description="Iphone 13 - ни дать, ни взять", price=80000.0, quantity=1), 2)
+
+@pytest.fixture
+def empty_category():
+    return Category("Пустая категория", "Категория без продуктов", [])
