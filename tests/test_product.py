@@ -1,7 +1,6 @@
 import pytest
 
 from src.product import Product
-from tests.conftest import product
 
 
 def test_product_init(product):
@@ -56,6 +55,7 @@ def test_product_add_error(product):
     with pytest.raises(TypeError):
         result = product + 1  # noqa
 
+
 def test_product_init_error():
     with pytest.raises(ValueError):
-        product = Product(name="IPhone 16", description="Последняя модель IPhone", price=120000.0, quantity=0) # noqa
+        product = Product(name="IPhone 16", description="Последняя модель IPhone", price=120000.0, quantity=0)  # noqa

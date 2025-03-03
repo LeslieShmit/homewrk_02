@@ -31,8 +31,10 @@ def test_add_product_error(category_1):
     with pytest.raises(TypeError):
         category_1.add_product(1)
 
+
 def test_middle_price(category_1):
     assert category_1.middle_price() == 100_000
+
 
 def test_middle_price_empty_category(empty_category):
     assert empty_category.middle_price() == 0
