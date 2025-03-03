@@ -1,7 +1,8 @@
+from src.abstract_group import AbstractGroup
 from src.product import Product
 
 
-class Category:
+class Category(AbstractGroup):
     """Класс для представления категории"""
 
     name: str
