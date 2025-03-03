@@ -47,3 +47,15 @@ class Category(AbstractGroup):
     @property
     def products_list(self):
         return self.__products
+
+    def middle_price(self):
+        total_price = 0
+        for product in self.__products:
+            total_price += product.price
+        try:
+            return total_price / len(self.__products)
+        except ZeroDivisionError:
+            return 0
+
+
+
