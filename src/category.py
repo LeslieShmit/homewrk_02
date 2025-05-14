@@ -49,10 +49,10 @@ class Category(AbstractGroup):
         return self.__products
 
     def middle_price(self):
-        total_price = 0
+        total_price = 0.0
+        if not self.__products:
+            return total_price
+
         for product in self.__products:
             total_price += product.price
-        try:
-            return total_price / len(self.__products)
-        except ZeroDivisionError:
-            return 0
+        return round(total_price, 2) / len(self.__products)
