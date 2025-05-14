@@ -47,3 +47,12 @@ class Category(AbstractGroup):
     @property
     def products_list(self):
         return self.__products
+
+    def middle_price(self):
+        total_price = 0.0
+        if not self.__products:
+            return total_price
+
+        for product in self.__products:
+            total_price += product.price
+        return round(total_price, 2) / len(self.__products)

@@ -7,4 +7,4 @@ class BaseProduct(ABC):
     @classmethod
     @abstractmethod
     def new_product(cls, *args, **kwargs):
-        pass # pragma: no cover
+        pass  # pragma: no cover
